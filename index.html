@@ -20,19 +20,19 @@
                         </div>
                         <div class="form-floating mt-3">
                             <select id="select-category" class="form-control">
-                                <option value="0">Todas categorias</option>
-                                <option value="0">Recorrente</option>
-                                <option value="0">Anual</option>
-                                <option value="0">Avulso</option>
+                                <option value="UP_TO_REVENUE">Todas categorias</option>
+                                <option value="RECURRING">Recorrente</option>
+                                <option value="ANNUAL">Anual</option>
+                                <option value="ON_TIME">Avulso</option>
                             </select>
                             <label for="floatingInput">Pesquisar por categoria</label>
                         </div>
                         <div class="form-floating mt-3">
                             <select id="select-values" class="form-control">
-                                <option value="0">Todos valores</option>
-                                <option value="0">Até R$ 2.000,00</option>
-                                <option value="0">Entre R$ 3.000,00 a R$ 5.000,00</option>
-                                <option value="0">Acima de R$ 10.000,00</option>
+                                <option value="ALL_VALUES">Todos valores</option>
+                                <option value="UP_TO_VALUE">Até R$ 2.000,00</option>
+                                <option value="VALUE_BETWEEN_VALUE">Entre R$ 3.000,00 a R$ 5.000,00</option>
+                                <option value="ABOVE_VALUE">Acima de R$ 10.000,00</option>
                             </select>
                             <label for="floatingInput">Pesquisar por faturamento</label>
                         </div>
@@ -54,43 +54,8 @@
                             <th scope="col">Ações</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
-                            <td>Mark</td>
-                            <td>Otto@teste.com</td>
-                            <td>
-                                <span class="badge text-bg-primary">Recorrente</span>
-                            </td>
-                            <td>R$ 2.000,00</td>
-                            <td>
-                                <button class="btn btn-primary">Editar</button>
-                                <button class="btn btn-danger">Excluir</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Mark</td>
-                            <td>Otto@teste.com</td>
-                            <td>
-                                <span class="badge text-bg-warning">Avulso</span>
-                            </td>
-                            <td>R$ 2.000,00</td>
-                            <td>
-                                <button class="btn btn-primary">Editar</button>
-                                <button class="btn btn-danger">Excluir</button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>Mark</td>
-                            <td>Otto@teste.com</td>
-                            <td>
-                                <span class="badge text-bg-info">Anual</span>
-                            </td>
-                            <td>R$ 122.000,00</td>
-                            <td>
-                                <button class="btn btn-primary">Editar</button>
-                                <button class="btn btn-danger">Excluir</button>
-                            </td>
-                          </tr>
+                        <tbody id="results">
+                          
                         </tbody>
                       </table>
                     </div>
