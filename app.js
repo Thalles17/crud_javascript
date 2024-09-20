@@ -3,7 +3,9 @@ const selectedCategory = document.querySelector('#select-category')
 const selectedValues   = document.querySelector('#select-values')
 const btnFilter        = document.querySelector('#btn-filter')
 const results          = document.querySelector('#results')
-
+const inputEmail       = document.querySelector('#input-email')
+const inputpassword    = document.querySelector('#input-password')
+const btnLogin         = document.querySelector('#btn-login')
 //CHAVE PRIMARIA PARA VALORES
 
 const CATEGORY_VALUES = {
@@ -62,7 +64,7 @@ function filter(){
     );
 
     // Filtrar por categoria
-    if (selectedCategoryValue !== 'UP_TO_REVENUE') {
+    if (selectedCategoryValue !== CATEGORY_REVENUE.UP_TO_REVENUE) {
         filteredData = filteredData.filter(item => item.category === selectedCategoryValue);
     }
 
@@ -106,9 +108,10 @@ function loadTable(data){
             </tr>
         `;
     });
-
+    
     results.innerHTML = rows;
 }
 
 // Carregar a tabela com todos os dados inicialmente
 loadTable(listData);
+
