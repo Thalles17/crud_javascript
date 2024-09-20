@@ -3,9 +3,8 @@ const selectedCategory = document.querySelector('#select-category')
 const selectedValues   = document.querySelector('#select-values')
 const btnFilter        = document.querySelector('#btn-filter')
 const results          = document.querySelector('#results')
-const inputEmail       = document.querySelector('#input-email')
-const inputpassword    = document.querySelector('#input-password')
-const btnLogin         = document.querySelector('#btn-login')
+
+
 //CHAVE PRIMARIA PARA VALORES
 
 const CATEGORY_VALUES = {
@@ -47,7 +46,7 @@ const listData = [
         email: 'doratellofdp@gmail.com',
         category: CATEGORY_REVENUE.ANNUAL,
         valuesMoney: 3000
-    },
+    }
 ]
 
 btnFilter.addEventListener('click', filter)
@@ -84,6 +83,7 @@ function filter(){
     loadTable(filteredData);
 }
 
+
 function loadTable(data){
     let rows = '';
 
@@ -114,4 +114,7 @@ function loadTable(data){
 
 // Carregar a tabela com todos os dados inicialmente
 loadTable(listData);
+
+
+
 
